@@ -13,7 +13,7 @@ The project created by this archetype will have configured Spring MVC support as
 regards application is deployable in any servlets container, and by default it has condigured deployment
 to jetty container by running following command:
 
-   mvn jetty:run
+    mvn jetty:run
 
 Project has configured support for content negotiation. By default supported formats are XML (through
 XStream library) and JSON (through Jaxon library). 
