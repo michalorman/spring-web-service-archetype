@@ -1,4 +1,7 @@
-package ${groupId};
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${groupId}.integration;
 
 import static java.lang.String.format;
 

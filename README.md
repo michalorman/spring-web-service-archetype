@@ -27,7 +27,25 @@ all your integration tests with following command:
 
 Note that for integration tests the failsafe plugin is used. In this regard all integration test classes
 must be prefixed with ``IT`` and should not contain ``Test`` suffix, otherwise will be run by the
-surefire plugin as unit tests.
+surefire plugin as unit tests. The ``BaseITTest`` class is given by default in order to serve as base class
+for integration test classes and allows to generate HTTP GET requests to the configured URL at which
+the application will be available (the URL is configured in ``pom.xml`` file and it is the location
+at which application will be available during the integration tests run using above command).
 
 The integration tests uses separate test database. By default the H2 database is confiured for test
 database, but it could be easily reconfigured in ``persistence.xml`` file for test resources.
+
+## Installation and creating project
+
+In order to create project using this archetype checkout or download source, navigate to the archetype's
+root directory and type:
+
+     mvn install
+
+Next anywhere you which type:
+
+     mvn archetype:generate -DarchetypeCatalog=local
+
+Choose option that refer to ``spring-web-service-archetype``, provide ``groupId``, ``artifactId`` and
+``servletName``. Last parameter gives information what name should be used for configured servlet and
+therefore indicates the name of the Spring MVC's configuration file for this servlet.
