@@ -35,6 +35,8 @@ at which application will be available during the integration tests run using ab
 The integration tests uses separate test database. By default the H2 database is confiured for test
 database, but it could be easily reconfigured in ``persistence.xml`` file for test resources.
 
+Archetype configures couple of SLF4J and Logback as logging facility.
+
 ## Installation and creating project
 
 In order to create project using this archetype checkout or download source, navigate to the archetype's
@@ -49,3 +51,7 @@ Next anywhere you choose type:
 Choose option that refer to ``spring-web-service-archetype``, provide ``groupId``, ``artifactId`` and
 ``servletName``. Last parameter gives information what name should be used for configured servlet and
 therefore indicates the name of the Spring MVC's configuration file for this servlet.
+
+If you want import application to eclipse run:
+
+    mvn eclipse:eclipse -Dwtpversion=1.5
