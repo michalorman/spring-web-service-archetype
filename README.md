@@ -42,7 +42,7 @@ root directory and type:
 
      mvn install
 
-Next anywhere you which type:
+Next anywhere you choose type:
 
      mvn archetype:generate -DarchetypeCatalog=local
 
