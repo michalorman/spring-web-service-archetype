@@ -6,18 +6,50 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <requiredProperties>
-        <requiredProperty key="groupId">
-            <defaultValue>org.example</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="artifactId">
-            <defaultValue>example</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="version">
-            <defaultValue>0.0.1.SNAPSHOT</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="servletName">
-            <defaultValue>test-servlet</defaultValue>
-        </requiredProperty>
+        <requiredProperty key="groupId" />
+        <requiredProperty key="artifactId" />
+        <requiredProperty key="version" />
+        <requiredProperty key="servletName" />
     </requiredProperties>
+
+    <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>src/test/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.xml</include>
+                <include>**/*.sql</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/webapp</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>lib</directory>
+            <includes>
+                <include>**/*.jar</include>
+            </includes>
+        </fileSet>
+    </fileSets>
 
 </archetype-descriptor>

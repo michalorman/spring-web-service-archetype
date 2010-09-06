@@ -1,4 +1,4 @@
-package pl.michalorman.spu.integration;
+package ${groupId};
 
 import static java.lang.String.format;
 

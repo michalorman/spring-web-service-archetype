@@ -22,8 +22,9 @@
         <org.springframework.version>3.0.4.RELEASE</org.springframework.version>
         <org.slf4j.version>1.6.1</org.slf4j.version>
 
+        <!-- Configuration for integration tests URL -->
         <${groupId}.integration.host>localhost</${groupId}.integration.host>
-        <${groupId}.integration.port>8080<${groupId}.integration.port>
+        <${groupId}.integration.port>8080</${groupId}.integration.port>
         <${groupId}.integration.url>
             http://${${groupId}.integration.host}:${${groupId}.integration.port}/${project.build.finalName}
         </${groupId}.integration.url>
@@ -179,7 +180,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <${groupId}.integration.url>
-                            ${groupId}.integration.url
+                            ${${groupId}.integration.url}
                         </${groupId}.integration.url>
                     </systemPropertyVariables>
                 </configuration>
